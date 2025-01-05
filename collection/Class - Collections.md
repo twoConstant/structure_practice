@@ -2,6 +2,25 @@
 
 > Collection을 상속받는 자료형을 대상으로 여러 편의 스테틱 메서드를 제공하는 구체 클래스. 이진탐색, 정렬, max, min값 탐색과 같은 기능을이 있다.
 
+### 목차
+
+- [컬렉션 자료형 전용 메서드](#%EC%BB%AC%EB%A0%89%EC%85%98-%EC%9E%90%EB%A3%8C%ED%98%95-%EC%A0%84%EC%9A%A9-%EB%A9%94%EC%84%9C%EB%93%9C)
+  - [`disjoint(Collection<?> c1, Collection<?> c2)`](#disjointcollection-c1-collection-c2)
+  - [`frequency(Collection<?> c, Object o)`](#frequencycollection-c-object-o)
+  - [`max(Collection<? extends T> coll), min 동일`](#maxcollection-extends-t-coll-min-%EB%8F%99%EC%9D%BC)
+  - [`max(Collection<? extends T> coll, Comparator<? super T> comp), min 동일`](#maxcollection-extends-t-coll-comparator-super-t-comp-min-%EB%8F%99%EC%9D%BC)
+- [리스트 자료형 전용 메서드](#%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%9E%90%EB%A3%8C%ED%98%95-%EC%A0%84%EC%9A%A9-%EB%A9%94%EC%84%9C%EB%93%9C)
+  - [`binarySearch(List<? extends Comparable<? super T>> list, T key)`](#binarysearchlist-extends-comparable-super-t-list-t-key)
+  - [`binarySearch(List<? extends T> list, T key, Comparator<? super T> c)`](#binarysearchlist-extends-t-list-t-key-comparator-super-t-c)
+  - [`copy(List<? super T> dest, List<? extends T> src)`](#copylist-super-t-dest-list-extends-t-src)
+  - [`fill(List<? super T> list, T obj)`](#filllist-super-t-list-t-obj)
+  - [`replaceAll(List<T> list, T oldVal, T newVal)`](#replacealllistt-list-t-oldval-t-newval)
+  - [`reverse(List<?> list)`](#reverselist-list)
+  - [`sort(List<T> list)`](#sortlistt-list)
+  - [`sort(List<T> list, Comparator<? super T> c)`](#sortlistt-list-comparator-super-t-c)
+  - [`shuffle(List<?> list)`](#shufflelist-list)
+  - [`swap(List<?> list, int i, int j)`](#swaplist-list-int-i-int-j)
+
 ## 컬랙션 자료형 전용 메서드
 
 ### `disjoint(Collection<?> c1, Collection<?> c2)`
